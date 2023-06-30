@@ -21,6 +21,8 @@ jobs:
       # hier ist der Platz für die Konfiguration der Sonar Analyse
   
     - name: Compile, build and push
-      run: mvn package
-           docker build --tag jhest99/pet-clinic:latest -f Dockerfile
-           
+      run: |
+          mvn package
+          docker build --tag jhest99/pet-clinic:latest -f Dockerfile .
+          
+ 
