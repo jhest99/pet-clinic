@@ -24,5 +24,7 @@ jobs:
       run: |
           mvn package
           docker build --tag jhest99/pet-clinic:latest -f Dockerfile .
-          
+          docker login -u ${jhest99} –p ${DOCKER_TOKEN}
+          docker push jhest99/pet-clinic:latest
+
  
